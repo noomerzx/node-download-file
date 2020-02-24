@@ -4,8 +4,11 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "generate:file": "node ./providers/files/generateFile.js",
+    "serve:provider:sftp": "node ./providers/sftp-server.js",
     "serve:provider:ftp": "node ./providers/ftp-server.js",
     "serve:provider:http": "node ./providers/http-server.js",
+    "start:download": "node .",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
