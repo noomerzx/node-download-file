@@ -1,8 +1,8 @@
 .DS_Store
 node_modules
 /dist
-/providers/files/big.file
-/providers/files/doublebig.file
+providers/files/big.file
+providers/files/doublebig.file
 # local env files
 .env.local
 .env.*.local
