@@ -4,6 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "serve:provider:ftp": "node ./providers/ftp-server.js",
+    "serve:provider:http": "node ./providers/http-server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -15,5 +17,8 @@
   "bugs": {
     "url": "https://github.com/noomerzx/node-download-file/issues"
   },
-  "homepage": "https://github.com/noomerzx/node-download-file#readme"
+  "homepage": "https://github.com/noomerzx/node-download-file#readme",
+  "dependencies": {
+    "ftp-srv": "^4.3.1"
+  }
 }
