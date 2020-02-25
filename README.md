@@ -17,10 +17,17 @@
 * <b>services</b>: "download service" that use connector to connect to any protocols
 * <b>services/connectors</b>: connector to connect with any protocols (given http, ftp) ** extensible
 * <b>utils</b>: utility file (eg. generate file)
+* <b>tests/unit</b>: unit test files
+* <b>tests/integration</b>: integration test files
 * <b>index.js</b>: main program
 
 ----------------------------------------
-## How to extend another protocols ?
+## Supported Protocols
+* <b>http</b>
+* <b>https</b>
+* <b>ftp</b>
+
+# How to extend another protocols ?
 > You can add more support protocols by adding you connector in "services/protocols/xxx.connector.js"
 > Then register your connector in "services/protocols/index.js"
 > Finished !! Run the program with extended protocols source.
