@@ -1,7 +1,7 @@
 const FtpSvr = require ( 'ftp-srv' )
 
 const hostname = '127.0.0.1'
-const port = 22
+const port = process.argv[2] || 21
 const options = {
   url: 'ftp://' + hostname + ':' + port,
   pasv_url: hostname,
@@ -16,7 +16,7 @@ ftpServer.on ('login', ( data, resolve, reject ) => {
 })
 
 ftpServer.on ('client-error', (connection, context, error) => {
-  console.log('error')
+  console.log('error = ', error)
 })
 
 ftpServer.listen().then(() => {
