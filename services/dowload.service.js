@@ -19,8 +19,8 @@ class DownloadService {
 
   download(destination) {
     const timestamp = Date.now()
-    const filename = this.protocol + '-' + timestamp + '-' + this.url.substring(this.url.lastIndexOf('/') + 1)
-    this.connector.download(destination + '/' + filename)
+    const filename = `${this.protocol}-${timestamp}-${this.url.substring(this.url.lastIndexOf('/') + 1)}`
+    this.connector.download(`${destination}/${filename}`)
   }
 }
 
