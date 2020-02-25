@@ -1,8 +1,6 @@
 # Node Downloader
 ============
-> A Node.js CLI to download file from any sources with any protocols
-<br>
-> You can extend any protocols by adding connector and register without modify any code.
+> A Node.js CLI to download file from any sources with any protocols.
 
 ----------------------------------------
 ## Dependencies
@@ -27,7 +25,7 @@
 * <b>https</b>
 * <b>ftp</b>
 
-# How to extend another protocols ?
+### How to extend another protocols ?
 > You can add more support protocols by adding you connector in "services/protocols/xxx.connector.js"
 > Then register your connector in "services/protocols/index.js"
 > Finished !! Run the program with extended protocols source.
