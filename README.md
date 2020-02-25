@@ -26,8 +26,8 @@
 * <b>ftp</b>
 
 ### How to extend another protocols ?
-> You can add more support protocols by adding you connector in "services/protocols/xxx.connector.js"
-> Then register your connector in "services/protocols/index.js"
+> You can add more support protocols by adding you connector in "services/protocols/xxx.connector.js"<br>
+> Then register your connector in "services/protocols/index.js"<br>
 > Finished !! Run the program with extended protocols source.
 
 ----------------------------------------
