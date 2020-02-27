@@ -3,18 +3,19 @@ const connectors = require('./connectors')
 class DownloadService {
   constructor (url) {
     this.url = url
-    this.connector = this.initConnector(url)
     this.protocol = ''
+    this.connector = this.initConnector(url)
   }
 
   initConnector(url) {
     for (let i = 0; i < connectors.protocols.length; i++) {
       let p = connectors.protocols[i]
-      if (url.startWith(p)) {
+      if (url.startsWith(p)) {
         this.protocol = p
-        return connectors[p](url)
+        return new connectors[p](url)
       }
     }
+    throw 'Not supported sources.'
   }
 
   async download(destination) {
