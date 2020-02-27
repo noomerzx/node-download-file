@@ -2,9 +2,9 @@ const axios = require('axios')
 const fs = require('fs')
 
 class HttpConnector {
-  constructor(url) {
+  constructor(source) {
     this.method = 'GET'
-    this.url = url
+    this.url = source
   }
 
   async download(destination) {

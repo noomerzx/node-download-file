@@ -1,4 +1,4 @@
 module.exports = {
-  destination: './download/',
+  destination: './download',
   retries: 2
 }

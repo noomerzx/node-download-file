@@ -20,5 +20,5 @@ ftpServer.on ('client-error', (connection, context, error) => {
 })
 
 ftpServer.listen().then(() => {
-  console.log (`Server running at http://${hostname}:${port}/`)
+  console.log (`Server running at ftp://${hostname}:${port}/`)
 })

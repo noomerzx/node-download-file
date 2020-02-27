@@ -34,9 +34,8 @@ class DownloadService {
     } finally {
       if (!success) {
         await fs.unlinkSync(`${destination}/${filename}`)
-        throw 'Downloaded file are incomplete, The file already removed.'
+        throw ERR_MSG.DOWNLOAD_INCOMPLETE
       }
-      return true
     }
   }
 }
