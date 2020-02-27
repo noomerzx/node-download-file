@@ -27,7 +27,6 @@ class DownloadService {
     try {
       success = await this.connector.download(`${destination}/${filename}`)
     } catch (error) {
-      console.log(error)
       throw error
     } finally {
       if (!success) {
