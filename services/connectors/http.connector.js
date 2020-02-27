@@ -13,7 +13,16 @@ class HttpConnector {
       url: this.url,
       responseType: 'stream'
     })
-    response.data.pipe(fs.createWriteStream(destination))
+    const downloadStream = fs.createWriteStream(destination)
+    return new Promise((resolve, reject) => {
+      response.data.pipe(downloadStream)
+      downloadStream.on("close", () => {
+        return resolve(true)
+      })
+      downloadStream.on("error", (err) => {
+        return reject(false)
+      })
+    })
   }
 }
 

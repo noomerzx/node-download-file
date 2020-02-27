@@ -1,4 +1,6 @@
 const connectors = require('./connectors')
+const { ERR_MSG } = require('../config/const.js')
+const fs = require('fs')
 
 class DownloadService {
   constructor (url) {
@@ -15,13 +17,22 @@ class DownloadService {
         return new connectors[p](url)
       }
     }
-    throw 'Not supported sources.'
+    throw ERR_MSG.FILE_NOT_SUPPORTED
   }
 
   async download(destination) {
     const timestamp = Date.now()
     const filename = `${this.protocol}-${timestamp}-${this.url.substring(this.url.lastIndexOf('/') + 1)}`
-    await this.connector.download(`${destination}/${filename}`)
+    let success = false
+    try {
+      success = await this.connector.download(`${destination}/${filename}`)
+    } catch (error) {
+      throw error
+    } finally {
+      if (!success) {
+        await fs.unlinkSync(filename)
+      }
+    }
   }
 }
 
