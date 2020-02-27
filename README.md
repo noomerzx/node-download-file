@@ -38,13 +38,13 @@
 npm install
 
 # run http server to serve file
-npm run serve:provider:http
+npm run serve:provider:http -- {port}
 
 # run ftp server to serve file
-npm run serve:provider:ftp
+npm run serve:provider:ftp -- {port}
 
 # generate file to serve in server above
-npm run generate:file {lineofstring}
+npm run generate:file -- {lineofstring}
 
 # run unit test
 npm run test:unit
@@ -53,4 +53,4 @@ npm run test:unit
 npm run test:integration
 
 # running the program
-npm run start:download {uri_source} {uri_source} {uri_source}
+npm run start:download -- {uri_source}

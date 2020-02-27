@@ -4,9 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "generate:file": "node ./utils/generate.file.js 1e6",
+    "generate:file": "node ./utils/generate.file.js",
     "serve:provider:ftp": "node ./providers/ftp.server.js",
-    "serve:provider:http": "node ./providers/http.server.js 8001",
+    "serve:provider:http": "node ./providers/http.server.js",
     "start:download": "node .",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
