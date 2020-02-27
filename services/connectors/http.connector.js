@@ -17,10 +17,15 @@ class HttpConnector {
     return new Promise((resolve, reject) => {
       response.data.pipe(downloadStream)
       downloadStream.on("close", () => {
+        console.log('111')
         return resolve(true)
       })
       downloadStream.on("error", (err) => {
-        return reject(false)
+        console.log('222')
+        // return reject(false)
+      })
+      downloadStream.on('unpipe', (src) => {
+        console.log('333')
       })
     })
   }
