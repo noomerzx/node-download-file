@@ -34,6 +34,9 @@
 ## Usage
 
 ``` bash
+# install all dependencies before anythings.
+npm install
+
 # run http server to serve file
 npm run serve:provider:http
 

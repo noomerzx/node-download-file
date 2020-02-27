@@ -17,10 +17,10 @@ class DownloadService {
     }
   }
 
-  download(destination) {
+  async download(destination) {
     const timestamp = Date.now()
     const filename = `${this.protocol}-${timestamp}-${this.url.substring(this.url.lastIndexOf('/') + 1)}`
-    this.connector.download(`${destination}/${filename}`)
+    await this.connector.download(`${destination}/${filename}`)
   }
 }
 

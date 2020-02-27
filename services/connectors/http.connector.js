@@ -6,14 +6,13 @@ class HttpConnector {
     this.url = url
   }
 
-  download(destination) {
-    axios({
+  async download(destination) {
+    const response = await axios({
       method: this.method,
       url: this.url,
       responseType: 'stream'
-    }).then(function (response) {
-      response.data.pipe(fs.createWriteStream(destination))
     })
+    response.data.pipe(fs.createWriteStream(destination))
   }
 }
 
