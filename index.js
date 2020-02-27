@@ -8,7 +8,7 @@ const main = async () => {
     try {
       const downloadService = new DownloadServices(sources[i])
       console.log(`>>> Downloading from "${sources[i]}" ...`)
-      await downloadService.download(config.destination)
+      const success = await downloadService.download(config.destination)
       console.log(`>>> Download Successfully !`)
     } catch (err) {
       console.log(`>>> Download Failed, source = "${sources[i]}".`)

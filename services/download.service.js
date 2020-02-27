@@ -22,16 +22,21 @@ class DownloadService {
 
   async download(destination) {
     const timestamp = Date.now()
-    const filename = `${this.protocol}-${timestamp}-${this.url.substring(this.url.lastIndexOf('/') + 1)}`
+    const filename = `${this.protocol}_${timestamp}_${this.url.substring(this.url.lastIndexOf('/') + 1)}`
     let success = false
     try {
-      success = await this.connector.download(`${destination}/${filename}`)
+      const lastChar = await this.connector.download(`${destination}/${filename}`)
+      if (lastChar === '\n') {
+        success = true
+      }
     } catch (error) {
       throw error
     } finally {
       if (!success) {
-        await fs.unlinkSync(filename)
+        await fs.unlinkSync(`${destination}/${filename}`)
+        throw 'Downloaded file are incomplete, The file already removed.'
       }
+      return true
     }
   }
 }

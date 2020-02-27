@@ -8,24 +8,23 @@ class HttpConnector {
   }
 
   async download(destination) {
-    const response = await axios({
+    const responseStream = await axios({
       method: this.method,
       url: this.url,
       responseType: 'stream'
     })
-    const downloadStream = fs.createWriteStream(destination)
-    return new Promise((resolve, reject) => {
-      response.data.pipe(downloadStream)
-      downloadStream.on("close", () => {
-        console.log('111')
-        return resolve(true)
+    const writer = fs.createWriteStream(destination)
+    return new Promise((resolve) => {
+      let lastChunk = 'x'
+      responseStream.data.on('data', (chunk) => {
+        writer.write(chunk)
+        lastChunk = chunk
       })
-      downloadStream.on("error", (err) => {
-        console.log('222')
-        // return reject(false)
-      })
-      downloadStream.on('unpipe', (src) => {
-        console.log('333')
+      responseStream.data.on('end', () => {
+        writer.end()
+        const data = lastChunk.toString()
+        const result = data[data.length - 1]
+        resolve(result)
       })
     })
   }

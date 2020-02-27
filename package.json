@@ -1,10 +1,10 @@
 {
-  "name": "download-test",
+  "name": "node-downloader",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "generate:file": "node ./utils/generate.file.js 6e6",
+    "generate:file": "node ./utils/generate.file.js 1e6",
     "serve:provider:ftp": "node ./providers/ftp.server.js 22",
     "serve:provider:http": "node ./providers/http.server.js 8001",
     "start:download": "node .",
