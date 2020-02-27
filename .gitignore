@@ -1,2 +1,4 @@
 node_modules
 providers/files/*.file
+download/*.file
+.DS_Store
