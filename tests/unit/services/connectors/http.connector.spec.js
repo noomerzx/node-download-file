@@ -1,6 +1,7 @@
 const HttpConnector = require('@/services/connectors/http.connector.js')
 const fs = require('fs')
 const axios = require('axios')
+
 jest.mock('fs', () => {
   return {
     createWriteStream: jest.fn().mockReturnValue({
@@ -9,6 +10,7 @@ jest.mock('fs', () => {
     })
   }
 })
+
 jest.mock('axios', () => {
   return jest.fn().mockResolvedValue({
     data: jest.fn().mockResolvedValue()

@@ -4,20 +4,12 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-<<<<<<< HEAD
-    "generate:file": "node ./utils/generate.file.js",
-    "serve:provider:ftp": "node ./providers/ftp.server.js",
-    "serve:provider:http": "node ./providers/http.server.js",
-    "start:download": "node .",
-    "test": "echo \"Error: no test specified\" && exit 1"
-=======
     "generate:file": "node -e 'require(\"./utils/generate.file.js\").writeFile()'",
     "serve:provider:ftp": "node ./providers/ftp.server.js",
     "serve:provider:http": "node ./providers/http.server.js",
     "start:download": "node -e 'require(\"./index.js\").main()'",
     "test:integration": "",
     "test:unit": "jest"
->>>>>>> 84bf50346fa7ba6313afd8b87ff55780cb4e23d0
   },
   "repository": {
     "type": "git",

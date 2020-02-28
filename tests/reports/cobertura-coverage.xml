@@ -1,11 +1,11 @@
 <?xml version="1.0" ?>
 <!DOCTYPE coverage SYSTEM "http://cobertura.sourceforge.net/xml/coverage-04.dtd">
-<coverage lines-valid="72" lines-covered="51" line-rate="0.7082999999999999" branches-valid="8" branches-covered="6" branch-rate="0.75" timestamp="1582892662139" complexity="0" version="0.1">
+<coverage lines-valid="83" lines-covered="69" line-rate="0.8312999999999999" branches-valid="8" branches-covered="6" branch-rate="0.75" timestamp="1582896849069" complexity="0" version="0.1">
   <sources>
-    <source>/Users/wisarut/Desktop/experimental_projects/node-download-test</source>
+    <source>C:\Users\Administrator\Desktop\agoda-project\node-downloader</source>
   </sources>
   <packages>
-    <package name="node-download-test" line-rate="1" branch-rate="1">
+    <package name="node-downloader" line-rate="1" branch-rate="1">
       <classes>
         <class name="index.js" filename="index.js" line-rate="1" branch-rate="1">
           <methods>
@@ -34,9 +34,9 @@
         </class>
       </classes>
     </package>
-    <package name="node-download-test.services" line-rate="0.96" branch-rate="0.6667000000000001">
+    <package name="node-downloader.services" line-rate="0.96" branch-rate="0.6667000000000001">
       <classes>
-        <class name="download.service.js" filename="services/download.service.js" line-rate="0.96" branch-rate="0.6667000000000001">
+        <class name="download.service.js" filename="services\download.service.js" line-rate="0.96" branch-rate="0.6667000000000001">
           <methods>
             <method name="(anonymous_0)" hits="3" signature="()V">
               <lines>
@@ -84,33 +84,49 @@
         </class>
       </classes>
     </package>
-    <package name="node-download-test.services.connectors" line-rate="0.2" branch-rate="1">
+    <package name="node-downloader.services.connectors" line-rate="0.6389" branch-rate="1">
       <classes>
-        <class name="ftp.connector.js" filename="services/connectors/ftp.connector.js" line-rate="0" branch-rate="1">
+        <class name="ftp.connector.js" filename="services\connectors\ftp.connector.js" line-rate="0.9473999999999999" branch-rate="1">
           <methods>
-            <method name="(anonymous_0)" hits="0" signature="()V">
+            <method name="(anonymous_0)" hits="2" signature="()V">
               <lines>
-                <line number="4" hits="0"/>
+                <line number="6" hits="2"/>
               </lines>
             </method>
-            <method name="(anonymous_1)" hits="0" signature="()V">
+            <method name="(anonymous_1)" hits="1" signature="()V">
               <lines>
-                <line number="10" hits="0"/>
+                <line number="15" hits="1"/>
+              </lines>
+            </method>
+            <method name="(anonymous_2)" hits="1" signature="()V">
+              <lines>
+                <line number="21" hits="1"/>
               </lines>
             </method>
           </methods>
           <lines>
-            <line number="1" hits="0" branch="false"/>
-            <line number="5" hits="0" branch="false"/>
-            <line number="6" hits="0" branch="false"/>
-            <line number="7" hits="0" branch="false"/>
-            <line number="11" hits="0" branch="false"/>
-            <line number="14" hits="0" branch="false"/>
-            <line number="15" hits="0" branch="false"/>
-            <line number="19" hits="0" branch="false"/>
+            <line number="1" hits="1" branch="false"/>
+            <line number="2" hits="1" branch="false"/>
+            <line number="3" hits="1" branch="false"/>
+            <line number="7" hits="2" branch="false"/>
+            <line number="8" hits="2" branch="false"/>
+            <line number="9" hits="2" branch="false"/>
+            <line number="10" hits="2" branch="false"/>
+            <line number="11" hits="2" branch="false"/>
+            <line number="12" hits="2" branch="false"/>
+            <line number="16" hits="1" branch="false"/>
+            <line number="20" hits="1" branch="false"/>
+            <line number="21" hits="1" branch="false"/>
+            <line number="22" hits="1" branch="false"/>
+            <line number="23" hits="1" branch="false"/>
+            <line number="24" hits="1" branch="false"/>
+            <line number="25" hits="1" branch="false"/>
+            <line number="26" hits="1" branch="false"/>
+            <line number="28" hits="0" branch="false"/>
+            <line number="34" hits="1" branch="false"/>
           </lines>
         </class>
-        <class name="http.connector.js" filename="services/connectors/http.connector.js" line-rate="0.29410000000000003" branch-rate="1">
+        <class name="http.connector.js" filename="services\connectors\http.connector.js" line-rate="0.29410000000000003" branch-rate="1">
           <methods>
             <method name="(anonymous_0)" hits="1" signature="()V">
               <lines>
@@ -160,9 +176,9 @@
         </class>
       </classes>
     </package>
-    <package name="node-download-test.utils" line-rate="1" branch-rate="1">
+    <package name="node-downloader.utils" line-rate="1" branch-rate="1">
       <classes>
-        <class name="generate.file.js" filename="utils/generate.file.js" line-rate="1" branch-rate="1">
+        <class name="generate.file.js" filename="utils\generate.file.js" line-rate="1" branch-rate="1">
           <methods>
             <method name="(anonymous_0)" hits="1" signature="()V">
               <lines>

@@ -1,11 +1,14 @@
 const program = require('@/index.js')
 var DownloadServices = require('@/services/download.service.js')
+
 jest.mock('@/services/download.service.js', () => {
   return jest.fn().mockReturnValue({
     download: jest.fn().mockResolvedValue()
   })
 })
+
 const mockLog = jest.fn()
+
 beforeEach(() => {
   console.log = mockLog
 })

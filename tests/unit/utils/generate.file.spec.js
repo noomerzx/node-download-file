@@ -1,6 +1,8 @@
 const generatorModule = require('@/utils/generate.file.js')
 const fs = require('fs')
+
 process.argv[1] = ''
+
 jest.mock('fs', () => {
   return {
     createWriteStream: jest.fn().mockReturnValue({
@@ -9,6 +11,7 @@ jest.mock('fs', () => {
     })
   }
 })
+
 describe('Generate File Utils Tests', () => {
   it('Should run as expected', () => {
     generatorModule.writeFile()

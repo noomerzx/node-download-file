@@ -1,11 +1,13 @@
 const DownloadService = require('@/services/download.service.js')
 const connectors = require('@/services/connectors')
 const fs = require('fs')
+
 jest.mock('fs', () => {
   return {
     unlinkSync: jest.fn().mockResolvedValue()
   }
 })
+
 jest.mock('@/services/connectors', () => {
   return {
     http: jest.fn().mockReturnValue({

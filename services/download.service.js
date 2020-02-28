@@ -36,6 +36,7 @@ class DownloadService {
         await fs.unlinkSync(`${destination}/${filename}`)
         throw ERR_MSG.DOWNLOAD_INCOMPLETE
       }
+      return success
     }
   }
 }
