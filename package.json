@@ -4,10 +4,11 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "generate:file": "node ./utils/generate.file.js 1e6",
-    "serve:provider:ftp": "node ./providers/ftp.server.js 22",
-    "serve:provider:http": "node ./providers/http.server.js 8001",
-    "start:download": "node .",
+    "generate:file": "node -e 'require(\"./utils/generate.file.js\").writeFile()'",
+    "serve:provider:ftp": "node ./providers/ftp.server.js",
+    "serve:provider:http": "node ./providers/http.server.js",
+    "start:download": "node -e 'require(\"./index.js\").main()'",
+    "test:integration": "",
     "test:unit": "jest"
   },
   "repository": {
@@ -24,6 +25,8 @@
     "axios": "^0.19.2",
     "basic-ftp": "^4.5.3",
     "ftp-srv": "^4.3.1",
-    "jest": "^25.1.0"
+    "jest": "^25.1.0",
+    "make-runnable": "^1.3.6",
+    "rewire": "^4.0.1"
   }
 }

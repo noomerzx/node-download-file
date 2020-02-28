@@ -7,7 +7,7 @@ module.exports = {
     'node_modules'
   ],
   moduleNameMapper: {
-    '^@/(.*)$': '<rootDir>/src/$1'
+    '^@/(.*)$': '<rootDir>/$1'
   },
   testMatch: [
     '<rootDir>/tests/unit/**/*.spec.(js|jsx|ts|tsx)|**/__tests__/*.(js|jsx|ts|tsx)',
@@ -16,8 +16,10 @@ module.exports = {
   collectCoverage: true,
   collectCoverageFrom: [
     "services/**/*.{js,ts}",
+    "utils/**/*.{js,ts}",
     "index.{js,ts}",
     "!providers/**/*.{js,ts}",
+    "!services/**/index.{js,ts}",
     "!providers/*.{js,ts}",
   ],
   // mapCoverage: true,
