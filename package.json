@@ -8,7 +8,7 @@
     "serve:provider:ftp": "node ./providers/ftp.server.js 22",
     "serve:provider:http": "node ./providers/http.server.js 8001",
     "start:download": "node .",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test:unit": "jest"
   },
   "repository": {
     "type": "git",
@@ -23,6 +23,7 @@
   "dependencies": {
     "axios": "^0.19.2",
     "basic-ftp": "^4.5.3",
-    "ftp-srv": "^4.3.1"
+    "ftp-srv": "^4.3.1",
+    "jest": "^25.1.0"
   }
 }
