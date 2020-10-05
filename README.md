@@ -17,7 +17,7 @@
 * <b>utils</b>: utility file (eg. generate file)
 * <b>tests/unit</b>: unit test files
 * <b>tests/integration</b>: integration test files
-* <b>index.js</b>: main program
+* <b>index.js</b>: main program.
 
 ----------------------------------------
 ## Supported Protocols
