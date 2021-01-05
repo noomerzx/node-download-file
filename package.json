@@ -22,7 +22,7 @@
   },
   "homepage": "https://github.com/noomerzx/node-download-file#readme",
   "dependencies": {
-    "axios": "^0.19.2",
+    "axios": "^0.21.1",
     "basic-ftp": "^4.5.3",
     "ftp-srv": "^4.3.1",
     "jest": "^25.1.0",
